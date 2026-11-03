@@ -69,7 +69,7 @@ export default function ColophonPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                github.com/saravana-raja/portfolio
+                github.com/saravana-raja/portfolio-v2
               </a>
             </dd>
           </div>

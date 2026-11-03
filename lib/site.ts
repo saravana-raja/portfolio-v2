@@ -13,7 +13,7 @@ export const site = {
     "https://www.credly.com/badges/d5950a02-5028-468b-b531-c136ad4a1ad1/public_url",
   triageRepo:
     "https://github.com/saravana-raja/bedrock-agentcore-support-triage",
-  repo: "https://github.com/saravana-raja/portfolio",
+  repo: "https://github.com/saravana-raja/portfolio-v2",
   resume: "/resume/saravana-raja-s-resume.pdf",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://saravanaraja.dev",
 } as const;

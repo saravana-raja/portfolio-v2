@@ -18,7 +18,7 @@ const sans = localFont({
   display: "swap",
   variable: "--font-sans",
 });
-555
+
 const description =
   "Saravana Raja S — Backend & Cloud Engineer in Chennai. Designing resilient distributed backends, scalable REST & WebSocket APIs, containerized cloud infrastructure on AWS & Azure, and agentic AI systems.";
 

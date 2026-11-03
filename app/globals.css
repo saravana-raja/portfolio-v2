@@ -416,9 +416,11 @@ dd {
   height: var(--nav-h);
   display: flex;
   align-items: center;
-  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 85%, transparent);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
-  transition: background-color 180ms var(--ease);
+  transition: background-color 180ms var(--ease), border-color 180ms var(--ease);
 }
 
 .nav-inner {
@@ -645,24 +647,18 @@ dd {
 }
 
 .dot--prod {
-  background: var(--pcb);
+  background: var(--ok);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--ok) 50%, transparent);
 }
 
 .dot--lab {
-  background: var(--ochre);
+  background: var(--accent);
+  box-shadow: 0 0 6px color-mix(in srgb, var(--accent) 50%, transparent);
 }
 
 .dot--learning {
   background: transparent;
   border: 1px solid var(--text-faint);
-}
-
-html[data-theme="console"] .dot--prod {
-  background: var(--mint);
-}
-
-html[data-theme="console"] .dot--lab {
-  background: var(--phosphor);
 }
 
 .availability {
@@ -1058,9 +1054,11 @@ html[data-theme="console"] .dot--lab {
   grid-template-columns: 52px minmax(0, 1fr) 190px 38px;
   gap: 20px;
   align-items: start;
-  padding: 26px 10px 26px 0;
+  padding: 26px 14px 26px 14px;
+  margin-inline: -14px;
   border-bottom: 1px solid var(--line);
-  transition: background-color 150ms var(--ease);
+  border-radius: var(--radius-sm);
+  transition: background-color 150ms var(--ease), border-color 150ms var(--ease);
 }
 
 .work-card:hover {
@@ -1573,12 +1571,15 @@ a.work-card {
   gap: 16px;
   padding: 0 16px;
   border-top: 1px solid var(--line);
-  background: var(--bg);
+  background: color-mix(in srgb, var(--bg) 90%, transparent);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   font-family: var(--font-mono);
   font-size: 0.5625rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--text-faint);
+  transition: background-color 180ms var(--ease), border-color 180ms var(--ease);
 }
 
 .status-group {
@@ -2357,6 +2358,10 @@ a.work-card {
 }
 
 .case-toc a:hover {
+  color: var(--accent);
+}
+
+.case-toc a:hover .n {
   color: var(--accent);
 }
 
@@ -3342,6 +3347,31 @@ a.work-card {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.sys-node-arrow {
+  position: absolute;
+  right: -7px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.5rem;
+  color: var(--accent);
+  background: var(--chassis-1);
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  z-index: 2;
+  pointer-events: none;
+}
+
+@media (max-width: 680px) {
+  .sys-node-arrow {
+    display: none;
+  }
 }
 
 .sys-code-preview {

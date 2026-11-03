@@ -1,0 +1,30 @@
+{
+  "name": "saravana-raja-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "lint": "next lint",
+    "resume": "node scripts/make-resume.mjs",
+    "shots": "node scripts/shots.mjs",
+    "verify:privacy": "node scripts/check-privacy.mjs",
+    "test": "playwright test"
+  },
+  "dependencies": {
+    "next": "16.4.3",
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@playwright/test": "^1.64.1",
+    "@types/node": "^22",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "pdf-lib": "^1.17.1",
+    "typescript": "^5"
+  }
+}

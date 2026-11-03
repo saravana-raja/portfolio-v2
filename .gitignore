@@ -1,0 +1,21 @@
+node_modules
+.next
+out
+build
+dist
+.DS_Store
+*.pem
+npm-debug.log*
+.env*
+!.env.example
+next-env.d.ts
+tsconfig.tsbuildinfo
+
+# Test outputs
+test-results/
+playwright-report/
+
+# Never commit the raw resume exports — they contain private contact details.
+raw-resume*.pdf
+Saravana_Raja_S_FlowCV_Resume*.pdf
+*.local

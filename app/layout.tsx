@@ -30,6 +30,15 @@ export const metadata: Metadata = {
   },
   description,
   applicationName: "Saravana Raja S",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32" },
+      { url: "/icon.png", sizes: "128x128", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
   authors: [{ name: site.name, url: site.github }],
   creator: site.name,
   keywords: [

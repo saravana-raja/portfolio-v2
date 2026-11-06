@@ -23,6 +23,11 @@ test.describe("Portfolio Website - Modern Systems Architecture", () => {
     await expect(proof).toContainText("2+");
     await expect(proof).toContainText("Dual");
     await expect(proof).toContainText("1,000+");
+
+    // Verify profile avatar renders
+    const avatar = page.locator(".hero-avatar");
+    await expect(avatar).toBeVisible();
+    await expect(avatar).toHaveAttribute("alt", "Saravana Raja S");
   });
 
   test("interactive systems architecture console operates across 4 layers", async ({

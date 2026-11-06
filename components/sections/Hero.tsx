@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { site } from "@/lib/site";
 import { SystemArchitectureConsole } from "@/components/interactive/SystemArchitectureConsole";
 import { ArrowDown, Download, Github } from "@/components/ui/Icons";
@@ -15,11 +16,24 @@ export function Hero() {
       <div className="hero-inner">
         <div className="hero-copy">
           <div className="hero-kicker">
-            <span className="label label--accent">{site.name}</span>
-            <span className="sep" aria-hidden="true">
-              /
-            </span>
-            <span className="label">Backend &amp; Cloud Engineer</span>
+            <div className="hero-avatar-wrap">
+              <Image
+                src="/saravana-new-photo.png"
+                alt="Saravana Raja S"
+                width={46}
+                height={46}
+                className="hero-avatar"
+                priority
+              />
+              <span className="hero-avatar-status" title="Active & Open to roles" />
+            </div>
+            <div className="hero-kicker-text">
+              <span className="label label--accent">{site.name}</span>
+              <span className="sep" aria-hidden="true">
+                /
+              </span>
+              <span className="label">Backend &amp; Cloud Engineer</span>
+            </div>
           </div>
 
           <h1 className="hero-title" id="hero-title">

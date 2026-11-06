@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Section } from "@/components/ui/Section";
 import { CopyEmail } from "@/components/interactive/CopyEmail";
 import { Github, Linkedin, Mail } from "@/components/ui/Icons";
@@ -36,42 +37,58 @@ export function Contact() {
           </div>
         </div>
 
-        <dl className="contact-card">
-          <div className="contact-row">
-            <dt>Email</dt>
-            <dd>
-              <CopyEmail />
-            </dd>
+        <div className="contact-card">
+          <div className="contact-profile-row">
+            <Image
+              src="/saravana-new-photo.png"
+              alt="Saravana Raja S"
+              width={50}
+              height={50}
+              className="contact-avatar"
+            />
+            <div className="contact-profile-info">
+              <strong className="contact-profile-name">{site.name}</strong>
+              <span className="contact-profile-role">Backend &amp; Cloud Systems</span>
+            </div>
           </div>
-          <div className="contact-row">
-            <dt>GitHub</dt>
-            <dd>
-              <a href={site.github} target="_blank" rel="noopener noreferrer">
-                saravana-raja ↗
-              </a>
-            </dd>
-          </div>
-          <div className="contact-row">
-            <dt>LinkedIn</dt>
-            <dd>
-              <a href={site.linkedin} target="_blank" rel="noopener noreferrer">
-                in/saravana-raja ↗
-              </a>
-            </dd>
-          </div>
-          <div className="contact-row">
-            <dt>Location</dt>
-            <dd>Chennai, IN · IST (UTC+5:30)</dd>
-          </div>
-          <div className="contact-row">
-            <dt>Availability</dt>
-            <dd>
-              <span className="availability">
-                <span className="dot" aria-hidden="true" /> Open to opportunities
-              </span>
-            </dd>
-          </div>
-        </dl>
+
+          <dl className="contact-details">
+            <div className="contact-row">
+              <dt>Email</dt>
+              <dd>
+                <CopyEmail />
+              </dd>
+            </div>
+            <div className="contact-row">
+              <dt>GitHub</dt>
+              <dd>
+                <a href={site.github} target="_blank" rel="noopener noreferrer">
+                  saravana-raja ↗
+                </a>
+              </dd>
+            </div>
+            <div className="contact-row">
+              <dt>LinkedIn</dt>
+              <dd>
+                <a href={site.linkedin} target="_blank" rel="noopener noreferrer">
+                  in/saravana-raja ↗
+                </a>
+              </dd>
+            </div>
+            <div className="contact-row">
+              <dt>Location</dt>
+              <dd>Chennai, IN · IST (UTC+5:30)</dd>
+            </div>
+            <div className="contact-row">
+              <dt>Availability</dt>
+              <dd>
+                <span className="availability">
+                  <span className="dot" aria-hidden="true" /> Open to opportunities
+                </span>
+              </dd>
+            </div>
+          </dl>
+        </div>
       </div>
     </Section>
   );
